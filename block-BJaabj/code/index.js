@@ -2,15 +2,29 @@
 1. Create a function named `sayHello` that alerts a message `Hello World!`.
 */
 
+function sayHello(){
+  alert(`Hello World`);
+}
+sayHello();
 /*
 2. Create a function named `fullName` with the following steps:
 
-  - Prompts a message saying `Enter your first name` and store the value into variable named `firstName`
-  - Prompts a message saying `Enter your last name` and store the value into variable named `lastName`
-  - Concat the value of fistName and lastName and store it in another variable named `fullName`.
+  - Prompts a message saying `Enter your first name` and store the value into 
+  variable named `firstName`
+  - Prompts a message saying `Enter your last name` and store the value into 
+  variable named `lastName`
+  - Concat the value of fistName and lastName and store it in another variable
+   named `fullName`.
   - Alert `fullName`
 */
 
+function fullName(){
+  let firstName = prompt(`Enter your first name`);
+  let lastName = prompt(`Enter your last name`);
+  var fullName = (`${firstName}  ${lastName}`);
+  alert(fullName);
+}
+fullName();
 /*
 3. Create a function named `addTwoNumbers` with the following steps:
 
@@ -20,6 +34,13 @@
   - Alert `sum`
 */
 
+function addTwoNumbers(){
+  var firstNum = +prompt("Enter the first number");
+  var secondNum = +prompt("Enter the second number");
+  var sum = (firstNum + secondNum);
+  alert(sum);
+}
+addTwoNumbers();
 /*
 4. Create a function named `getTable` with the following steps:
 
