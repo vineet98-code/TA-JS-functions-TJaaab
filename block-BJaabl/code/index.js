@@ -29,7 +29,12 @@ addTwoNumbers(20, 32); // 32
 addTwoNumbers(10, "100"); // Alert Enter Valid Input
 */
 function addTwoNumbers(firstNum, secondNum){
-  return firstNum + secondNum;
+  if(typeof firstNum !== 'number' || typeof secondNum !== 'number'){
+  alert(`Enter Valid Input`);
+  } else {
+    return firstNum  + secondNum;
+  }
+  
 }
 addTwoNumbers(34,45);
 
@@ -45,9 +50,33 @@ calc(20, 10, 'sub'); // 10
 calc(20, 10, 'mul'); // 200
 */
 function calc(numA, numB, operation){
-   return `numA + numB ${operation}`;
+  if(typeof numA !== 'number' || typeof numB !== 'number'){
+    alert(`Enter valid Input`);
+  } else {
+    
+    switch (operation) {
+      case 'add':
+        return numA + numB;
+        break;
+      case 'sub':
+        return numA - numB;
+        break;
+          
+      case 'mul':
+        return numA * numB;
+        break;
+      
+      case 'div':
+        return numA / numB;
+        break;
+     
+      default:
+        return `Wrong choice`;
+        break;
+    }
+  }
 }
-calc(10,20 add);
+
 
 
 /*
@@ -58,7 +87,21 @@ isLeapYear(2000); // true
 isLeapYear(2001); // false
 */
 
+function isLeapYear(year) {
+  if(year %400 === 0)  return true;
+  if(year %100 === 0)  return false;
+  return year % 4 === 0;
+}
+
 
 /*
 6. Create a function named `getFactorial` that accepts a number and return the factorial of the number.
 */
+
+function fact(n){
+  if(n==1){
+    return 1;
+  } else{
+    return n * fact(n-1);
+  }
+}
