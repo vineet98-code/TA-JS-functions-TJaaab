@@ -29,11 +29,11 @@ isInRange(1, 10, 19); // false
 */
 
 // - Write a Function Decleration for above problem
-function isInRange() {
-  // Your code
+function isInRange(lower,upper, num) {
+  return num > lower && num < upper;
 }
 // - Execute the function with required parameter
-
+isInRange(1, 20, 9); // true
 
 /* 2. calculateBMI
 
@@ -57,26 +57,23 @@ Obese: BMI is 30 or more
 */
 
 function calculateBMI(weight, height) {
-   
-
-  const bmi = weight / (height * height);
-  
+   let bmi = weight / (height * height);
 
   switch (true) {
-    case Underweight:
-      return `BMI is less than 18.5`
+    case bmi<18.5:
+      return `Underweight`
       break;
-    case NormalWeight:
-      return `BMI is 18.5 to 24.9`
+    case bmi > 10.5 && bmi< 24.9:
+      return `Normal`
       break;
-    case Overweight:
-      return `BMI is 25 to 29.9`
+    case bmi > 25 && bmi< 28.9:
+      return `Overweight`
       break;
-    case Obese:
-      return `BMI is 30 or more`
+    case bmi > 30.5:
+      return `Obese`
       break;
     default:
-      return `Wrong choice`;
+      alert("Enter valid input") ;
       break;
   }
 }
@@ -115,8 +112,10 @@ function appropiateDrinks(age) {
 
 /* 4. Add two numers or string
 
-Write a function that accepts two numbers or string and returns the sum of the numbers and concatenation of the strings.
-Twist is when user passes anything other than number, or string value you should be able to handle that.
+Write a function that accepts two numbers or string and returns 
+the sum of the numbers and concatenation of the strings.
+Twist is when user passes anything other than number, or string value you 
+should be able to handle that.
 
 - If both values are number add them
 - If both values are string concat theme
@@ -124,8 +123,14 @@ Twist is when user passes anything other than number, or string value you should
 
 */
 
-function sum() {
-  // Your code
+function sum(numA, numB) {
+  if(typeof numA == "number" && typeof numB == "number"){
+    return numA + numB;
+  } else if (typeof numA == "string" && typeof numB == "string"){
+    return numA + " " +numB;
+  } else {
+    alert("Enter valid value");
+  }
 }
 
 // Function Test
