@@ -216,13 +216,9 @@ let isGreater = function(x,y){
 }
 
 // - Write an Arrow Function without curly brackets(if possible)
-let isGreater = function(x,y){
-  if(x>y){
-    return true;
-  } else{
-    return false;
-  }
-}
+let isGreater = (x,y) => x>y ? true : false;
+
+
 
 
 // - Write an Arrow Function with curly brackets
@@ -256,42 +252,44 @@ Do the following with above problem.
 
 // - Write a Function Declaration
 function oddOrEven(n){
-  if(n%2==0){
-    return `Number is odd`
-  } else{
+  if(n % 2===0){
     return `Number is even`
+  } else{
+    return `Number is odd`
   }
 }
 
 // - Write an anonymous Function Expression
 let oddOrEven = function (n){
-  if(n%2==0){
-    return `Number is odd`
-  } else{
+  if(n%2===0){
     return `Number is even`
+  } else{
+    return `Number is odd`
   }
 }
 
 // - Write an named Function Expression
 let oddOrEven = function named (n){
-  if(n%2==0){
-    return `Number is odd`
-  } else{
+  if(n%2===0){
     return `Number is even`
+  } else{
+    return `Number is odd`
   }
 }
 
 
 // - Write an Arrow Function without curly brackets (hint: use ternary operator)
+let oddOrEven = (n) => n % 2 === 0 ? `Number is even` : `Number is odd`;
 
 // - Write an Arrow Function with curly brackets
-let oddOrEven = (n)=>{
-  if(n%2==0){
-    return `Number is odd`
-  } else{
-    return `Number is even`
-  }
-}
+let oddOrEven = (n) => {
+    if(n%2===0){
+      return `Number is even`
+    } else{
+      return `Number is odd`
+    }
+}  
+
 
 
 // - Execute the function
