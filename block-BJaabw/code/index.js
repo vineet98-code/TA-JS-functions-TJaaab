@@ -11,13 +11,16 @@ minToSec(2) ➞ 120
 */
 
 // - Write a Function Decleration for above problem
-function minToSec() {
-  // Your code
+function minToSec(n) {
+  let sec = n * 60;
+  return sec;
 }
 // - Execute the function with required parameter
+minToSec(50); // 3000;
 
 /* 2. 
-Create a function named isInRange which validates whether a number n is exclusively within the bounds of lower and upper.
+Create a function named isInRange which validates whether a number n 
+is exclusively within the bounds of lower and upper.
 Return true and false based on that.
 
 The function accepts three parameter lower, upper and the number.
@@ -31,14 +34,18 @@ function isInRange() {
 }
 // - Execute the function with required parameter
 
+
 /* 2. calculateBMI
 
 
-Take two arguments weight and height and return `Underweight`, `Normal` etc based on data.
+Take two arguments weight and height and return `Underweight`, `Normal` etc 
+based on data.
 
-Body mass index(BMI) is calculated as follows: bmi = weight / (height x height). Write a function which calculates bmi.
+Body mass index(BMI) is calculated as follows: bmi = weight / (height x height). 
+Write a function which calculates bmi.
 BMI is used to broadly define different weight groups.
-Check if a person is underweight, normal, overweight or obese based the information given below.
+Check if a person is underweight, normal, overweight or obese based the 
+information given below.
 
 These are the conditions:
 
@@ -49,13 +56,35 @@ Obese: BMI is 30 or more
 
 */
 
-function calculateBMI() {
-  // Your code
+function calculateBMI(weight, height) {
+   
+
+  const bmi = weight / (height * height);
+  
+
+  switch (true) {
+    case Underweight:
+      return `BMI is less than 18.5`
+      break;
+    case NormalWeight:
+      return `BMI is 18.5 to 24.9`
+      break;
+    case Overweight:
+      return `BMI is 25 to 29.9`
+      break;
+    case Obese:
+      return `BMI is 30 or more`
+      break;
+    default:
+      return `Wrong choice`;
+      break;
+  }
 }
 
 /* 3. appropiateDrinks
 
-Create a function that take the age are return the appropiate drink based on these conditions:
+Create a function that take the age are return the appropiate 
+drink based on these conditions:
 
 - Under 14 years old — return "drink fruit juice"
 - Under 18 years old — return "drink soda"
@@ -64,8 +93,24 @@ Create a function that take the age are return the appropiate drink based on the
 
 */
 
-function appropiateDrinks() {
-  // Your code
+function appropiateDrinks(age) {
+  switch (true) {
+    case age<14:
+      return `drink fruit juice`
+      break;
+    case age<18:
+      return `drink soda`
+      break;
+    case age<21:
+      return `drink fruit-flavored beer`
+      break;
+    case age>=21:
+      return `drink throat-piercing vodka`
+      break;
+    default:
+      return `Wrong choice`;
+      break;
+  }
 }
 
 /* 4. Add two numers or string
